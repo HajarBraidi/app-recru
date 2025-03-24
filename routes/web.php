@@ -6,5 +6,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users/create', [UserController::class, 'create']); // Correction ici
+Route::get('/users/create', [UserController::class, 'create']); 
 Route::post('/users/store', [UserController::class, 'store']);
