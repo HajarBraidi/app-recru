@@ -1,3 +1,60 @@
+# App Recru - plateforme de recrutement
+
+Plateforme web de gestion du recrutement, développée avec Laravel.
+
+L'objectif du projet est de permettre aux candidats de consulter et de postuler aux offres, aux recruteurs de publier et gérer leurs annonces, et aux administrateurs de superviser la plateforme.
+
+## État du projet
+
+Ce dépôt contient la base du projet :
+
+- Mise en place de l'application Laravel 12
+- Formulaire de création d'un utilisateur (`/users/create`) avec Bootstrap
+- Validation des données (nom, email unique, mot de passe de 6 caractères minimum)
+- Enregistrement de l'utilisateur avec mot de passe haché
+- Migrations de la base de données (utilisateurs, cache, files d'attente)
+
+## Technologies
+
+- PHP 8.2
+- Laravel 12
+- Blade et Bootstrap 5
+- SQLite (configuration par défaut, modifiable dans `.env`)
+- Vite
+
+## Routes
+
+| Méthode | Route | Description |
+|---|---|---|
+| GET | `/` | page d'accueil |
+| GET | `/users/create` | formulaire de création d'un utilisateur |
+| POST | `/users/store` | enregistrement de l'utilisateur |
+
+## Installation
+
+Prérequis : PHP 8.2, Composer, Node.js.
+
+```bash
+git clone https://github.com/HajarBraidi/app-recru.git
+cd app-recru
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate
+php artisan serve
+```
+
+L'application est ensuite disponible sur `http://localhost:8000`.
+
+## Auteure
+
+Hajar Braidi
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -65,58 +122,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-
-# App Recru - plateforme de recrutement (version de départ)
-
-Première version d'une plateforme web de gestion du recrutement, développée avec Laravel.
-
-L'objectif du projet est de permettre aux candidats de consulter et de postuler aux offres, aux recruteurs de publier et gérer leurs annonces, et aux administrateurs de superviser la plateforme.
-
-## État du projet
-
-Ce dépôt contient la base du projet :
-
-- Mise en place de l'application Laravel 12
-- Formulaire de création d'un utilisateur (`/users/create`) avec Bootstrap
-- Validation des données (nom, email unique, mot de passe de 6 caractères minimum)
-- Enregistrement de l'utilisateur avec mot de passe haché
-- Migrations de la base de données (utilisateurs, cache, files d'attente)
-
-## Technologies
-
-- PHP 8.2
-- Laravel 12
-- Blade et Bootstrap 5
-- SQLite (configuration par défaut, modifiable dans `.env`)
-- Vite
-
-## Routes
-
-| Méthode | Route | Description |
-|---|---|---|
-| GET | `/` | page d'accueil |
-| GET | `/users/create` | formulaire de création d'un utilisateur |
-| POST | `/users/store` | enregistrement de l'utilisateur |
-
-## Installation
-
-Prérequis : PHP 8.2, Composer, Node.js.
-
-```bash
-git clone https://github.com/HajarBraidi/app-recru.git
-cd app-recru
-composer install
-npm install
-cp .env.example .env
-php artisan key:generate
-touch database/database.sqlite
-php artisan migrate
-php artisan serve
-```
-
-L'application est ensuite disponible sur `http://localhost:8000`.
-
-## Auteure
-
-Hajar Braidi
 
